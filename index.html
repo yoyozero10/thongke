@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống Kê Tiền Lời Hàng Ngày</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thống Kê Tiền Lời Hàng Ngày</h1>
+        
+        <div class="sync-section">
+            <button id="sync-btn">Đồng bộ dữ liệu</button>
+            <div id="sync-status"></div>
+        </div>
+        
+        <div class="input-section">
+            <input type="date" id="date-input" value="">
+            <input type="number" id="amount-input" placeholder="Nhập số tiền (+ hoặc -)">
+            <input type="text" id="description-input" placeholder="Mô tả (tùy chọn)">
+            <button id="add-btn">Thêm</button>
+        </div>
+
+        <div class="daily-records">
+            <!-- Dữ liệu thống kê sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
