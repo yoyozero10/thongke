@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thống Kê Tiền Lời Hàng Ngày</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Thống Kê Tiền Lời Hàng Ngày</h1>
-        
-        <div class="sync-section">
-            <button id="sync-btn">Đồng bộ dữ liệu</button>
-            <div id="sync-status"></div>
-        </div>
-        
-        <div class="input-section">
-            <input type="date" id="date-input" value="">
-            <input type="number" id="amount-input" placeholder="Nhập số tiền (+ hoặc -)">
-            <input type="text" id="description-input" placeholder="Mô tả (tùy chọn)">
-            <button id="add-btn">Thêm</button>
-        </div>
-
-        <div class="daily-records">
-            <!-- Dữ liệu thống kê sẽ được hiển thị ở đây -->
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <header>
+        <h1>Thống Kê Thu Chi Hàng Ngày</h1>
+    </header>
+    
+    <div id="loading" class="loading">Đang tải ứng dụng thu chi...</div>
+    
+    <!-- Thay URL_TỪ_GOOGLE_APPS_SCRIPT bằng URL bạn nhận được sau khi triển khai -->
+    <iframe id="app-frame" src="https://script.google.com/macros/s/AKfycbwtl8mPGKtfo1_qc73NBW7AOfKulnECuhEV0BCVrnMCZcUAUPEUUGraNt-ZpdRwZzDaNA/exec" style="display:none" onload="frameLoaded()"></iframe>
+    
+    <script>
+        function frameLoaded() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('app-frame').style.display = 'block';
+        }
+    </script>
 </body>
 </html> 
