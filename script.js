@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // URL của Google Apps Script Web App
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyNcw0gL89Qx36ucruCuv06mAp6kAK2cOGElou1fD9NcGnyxLCJAwxuC7e9DMBhiXdN/exec'; // URL mới được cập nhật
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzSiT_l_GOgdJJCimSE5KOzp28BvYRQv6DeYQBzaUNqnTMHPp0_gJT7wEcg3cbHLINzmQ/exec'; // URL mới đã hoạt động
 
 // Lưu trữ dữ liệu
 let transactions = JSON.parse(localStorage.getItem('transactions')) || {};
